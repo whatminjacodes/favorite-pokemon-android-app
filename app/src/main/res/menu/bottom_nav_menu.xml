@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationAllPokemon"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/bottom_nav_title_all_pokemon" />
+
+    <item
+        android:id="@+id/navigationFavorites"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/bottom_nav_title_favorites" />
+
+    <item
+        android:id="@+id/navigationSettings"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/bottom_nav_title_settings" />
+
+</menu>

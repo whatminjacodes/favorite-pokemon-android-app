@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigationAllPokemon">
+
+    <fragment
+        android:id="@+id/navigationAllPokemon"
+        android:name="com.minjee.favoritepokemon.ui.allpokemon.AllPokemonFragment"
+        android:label="@string/fragment_all_pokemon_title"
+        tools:layout="@layout/fragment_all_pokemon" />
+
+    <fragment
+        android:id="@+id/navigationFavorites"
+        android:name="com.minjee.favoritepokemon.ui.favorites.FavoritesFragment"
+        android:label="@string/fragment_favorite_pokemon_title"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/navigationSettings"
+        android:name="com.minjee.favoritepokemon.ui.settings.SettingsFragment"
+        android:label="@string/fragment_settings_title"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

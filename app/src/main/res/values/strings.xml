@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- General strings -->
+    <string name="app_name">Favorite Pokemon</string>
+
+    <!-- Bottom Navigation strings -->
+    <string name="bottom_nav_title_all_pokemon">All</string>
+    <string name="bottom_nav_title_favorites">Favorites</string>
+    <string name="bottom_nav_title_settings">Settings</string>
+
+    <!-- All Pokemon Fragment strings -->
+    <string name="fragment_all_pokemon_title">All 1st Gen Pokemon</string>
+
+    <!-- Favorite Pokemon Fragment strings -->
+    <string name="fragment_favorite_pokemon_title">My Favorites</string>
+
+    <!-- Settings Fragment strings -->
+    <string name="fragment_settings_title">App Settings</string>
+
+</resources>
