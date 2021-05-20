@@ -21,3 +21,7 @@ App is made to work with Android version 7 and later
 
 ##### Koin dependency injection
 Koin version is 3.0.2. Find info about Koin from https://insert-koin.io/
+
+##### Setup times
+Basic project skeleton using MVVM, View binding and Navigation component ~2h
+Koin setup ~3h (I'n new with dependency injection)
