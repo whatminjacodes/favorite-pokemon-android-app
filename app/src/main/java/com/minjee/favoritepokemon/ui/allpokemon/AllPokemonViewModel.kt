@@ -1,13 +1,14 @@
 package com.minjee.favoritepokemon.ui.allpokemon
 
-import androidx.lifecycle.LiveData
+import android.content.res.Resources
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class AllPokemonViewModel : ViewModel() {
+class AllPokemonViewModel(val resources: Resources) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val uiTextLiveData = MutableLiveData<String>()
+
+    fun setText(text: String) {
+        uiTextLiveData.postValue(text)
     }
-    val text: LiveData<String> = _text
 }
