@@ -9,11 +9,12 @@ The app displays a list of 1st generation Pokemon and the user is able to favori
 ### What's included
 - Android MVVM architecture
 - Koin dependency injection
-- Retrofit/OkHttp/Gson for fetching the Pokemon data from https://pokeapi.co/docs/v2
 - Android Navigation component
-- View binding and data binding
+- View binding (and data binding?)
+- Retrofit/OkHttp/Gson for fetching the Pokemon data from https://pokeapi.co/docs/v2
 - Material Design best practices
 - Light/Dark theme
+- (accessibility?)
 
 ### Instructions
 ##### Android version
