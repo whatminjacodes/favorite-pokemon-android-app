@@ -1,13 +1,15 @@
 package com.minjee.favoritepokemon.ui.pokemon.allpokemon
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.minjee.favoritepokemon.data.PokemonList
 import com.minjee.favoritepokemon.databinding.FragmentTabAllPokemonBinding
+import com.minjee.favoritepokemon.ui.recyclerview.PokemonRecyclerViewAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AllPokemonTabFragment : Fragment() {
@@ -16,6 +18,8 @@ class AllPokemonTabFragment : Fragment() {
 
     private var _binding: FragmentTabAllPokemonBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,9 +36,22 @@ class AllPokemonTabFragment : Fragment() {
         allPokemonViewModel.getPokemon()
         allPokemonViewModel.responseList.observe(viewLifecycleOwner, Observer {
 
-            Log.d("test22", it.results.size.toString())
-
+            //pokemonList = it.results
         })
+
+        var listOfPokemon = listOf<PokemonList>(
+            PokemonList("bulba", "asd"),
+            PokemonList("ivysaur", "asd"),
+            PokemonList("venusaur", "asd"),
+            PokemonList("pikapii", "asd")
+        )
+
+        linearLayoutManager = LinearLayoutManager(context)
+
+        binding.apply {
+            myPokemonTabRecyclerview.layoutManager = linearLayoutManager
+            myPokemonTabRecyclerview.adapter = PokemonRecyclerViewAdapter(listOfPokemon)
+        }
     }
 
     override fun onDestroyView() {

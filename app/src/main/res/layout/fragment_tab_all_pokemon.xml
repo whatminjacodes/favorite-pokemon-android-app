@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.pokemon.allpokemon.AllPokemonTabFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myPokemonTabRecyclerview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="all pokemon"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
