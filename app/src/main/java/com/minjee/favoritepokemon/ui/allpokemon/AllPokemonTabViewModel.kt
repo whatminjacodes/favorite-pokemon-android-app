@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class AllPokemonViewModel(private val pokemonRepository: PokemonRepository) : ViewModel() {
+class AllPokemonTabViewModel(private val pokemonRepository: PokemonRepository) : ViewModel() {
 
     val responseList: MutableLiveData<Response> = MutableLiveData()
 

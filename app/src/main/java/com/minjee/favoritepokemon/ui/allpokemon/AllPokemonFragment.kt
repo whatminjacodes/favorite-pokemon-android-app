@@ -12,7 +12,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AllPokemonFragment : Fragment() {
 
-    private val allPokemonViewModel: AllPokemonViewModel by viewModel()
+    private val allPokemonViewModel: AllPokemonTabViewModel by viewModel()
 
     private var _binding: FragmentAllPokemonBinding? = null
     private val binding get() = _binding!!
