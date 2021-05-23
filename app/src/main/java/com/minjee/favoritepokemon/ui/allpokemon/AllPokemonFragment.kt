@@ -32,7 +32,7 @@ class AllPokemonFragment : Fragment() {
         allPokemonViewModel.getPokemon()
         allPokemonViewModel.responseList.observe(viewLifecycleOwner, Observer {
 
-            Log.d("test2", it.results.size.toString())
+            Log.d("test22", it.results.size.toString())
 
         })
     }

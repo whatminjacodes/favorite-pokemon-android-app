@@ -1,4 +1,8 @@
-package com.minjee.favoritepokemon.networking
+package com.minjee.favoritepokemon.data
+
+data class PokemonRequest(
+    val numberOfPokemon: Int
+)
 
 data class Response(
     val count: Int,
