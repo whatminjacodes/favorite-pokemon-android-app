@@ -1,14 +1,10 @@
 package com.minjee.favoritepokemon.ui.allpokemon
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.minjee.favoritepokemon.networking.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class AllPokemonViewModel(private val poksuRepository: PokemonRepository) : ViewModel() {
 
@@ -31,7 +27,7 @@ class AllPokemonViewModel(private val poksuRepository: PokemonRepository) : View
         }*/
     }
 
-    val myResponseList: MutableLiveData<Pokemon> = MutableLiveData()
+    val myResponseList: MutableLiveData<Response> = MutableLiveData()
 
 
     fun getPosts() {

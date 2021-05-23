@@ -8,7 +8,7 @@ import retrofit2.http.Header
 import retrofit2.http.Query
 
 interface NetworkApi {
-    @GET("/api/v2/pokemon/")
+   /* @GET("/api/v2/pokemon/")
     fun getPokemon(@Query("limit") maxNumberOfPokemon: PokemonRequest): Call<PokemonResponse>
-
+*/
 }

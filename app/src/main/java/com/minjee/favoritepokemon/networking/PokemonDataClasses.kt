@@ -1,14 +1,13 @@
 package com.minjee.favoritepokemon.networking
 
-data class PokemonRequest(
-    val maxNum: Int?
+data class Response(
+    val count: Int,
+    val next: String,
+    val previous: String,
+    val results: List<PokemonList>
 )
 
-data class PokemonResponse(
-    val pokemon: List<Pokemon>
-)
-
-data class Pokemon2(
-    val name: String?,
+data class PokemonList(
+    val name: String,
     val url: String
 )

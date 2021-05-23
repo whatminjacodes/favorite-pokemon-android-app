@@ -5,9 +5,6 @@ import retrofit2.http.Query
 
 interface UserAPI {
 
-    @GET("posts/1")
-    suspend fun getPost(): User
-
     @GET("api/v2/pokemon")
-    suspend fun getPosts(@Query("limit") maxPokemon: Int): Pokemon
+    suspend fun getPosts(@Query("limit") maxPokemon: Int): Response
 }
