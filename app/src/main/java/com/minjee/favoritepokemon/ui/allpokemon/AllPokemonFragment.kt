@@ -17,30 +17,20 @@ class AllPokemonFragment : Fragment() {
     private var _binding: FragmentAllPokemonBinding? = null
     private val binding get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentAllPokemonBinding.inflate(inflater, container, false)
-
-        allPokemonViewModel.uiTextLiveData.observe(viewLifecycleOwner, Observer { updatedText ->
-            binding.textHome.text = updatedText
-        })
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        allPokemonViewModel.setText("plaaplaa")
-
         allPokemonViewModel.getPokemon()
-
-        allPokemonViewModel.getPosts()
-        allPokemonViewModel.myResponseList.observe(viewLifecycleOwner, Observer {
+        allPokemonViewModel.responseList.observe(viewLifecycleOwner, Observer {
 
             Log.d("test2", it.results.size.toString())
 
