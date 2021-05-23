@@ -29,3 +29,7 @@ Basic project skeleton using MVVM, View binding and Navigation component ~2h
 Koin setup ~3h
 
 Retrofit setup ~4h
+
+RecyclerView setup ~2h
+
+Other ~1h
