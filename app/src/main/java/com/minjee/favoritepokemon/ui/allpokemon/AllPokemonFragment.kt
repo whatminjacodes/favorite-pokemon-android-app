@@ -1,6 +1,7 @@
 package com.minjee.favoritepokemon.ui.allpokemon
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,18 +23,18 @@ class AllPokemonFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentAllPokemonBinding.inflate(inflater, container, false)
-
-        allPokemonViewModel.uiTextLiveData.observe(viewLifecycleOwner, Observer { updatedText ->
-            binding.textHome.text = updatedText
-        })
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        allPokemonViewModel.setText("plaaplaa")
+        allPokemonViewModel.getPokemon()
+        allPokemonViewModel.responseList.observe(viewLifecycleOwner, Observer {
+
+            Log.d("test22", it.results.size.toString())
+
+        })
     }
 
     override fun onDestroyView() {
