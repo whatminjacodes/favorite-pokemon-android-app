@@ -22,4 +22,9 @@
         <item name="tabSelectedTextColor">@color/black</item>
     </style>
 
+    <style name="TabLayout.TextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>

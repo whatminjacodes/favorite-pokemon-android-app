@@ -1,4 +1,4 @@
-package com.minjee.favoritepokemon.ui.allpokemon
+package com.minjee.favoritepokemon.ui.pokemon.mypokemon
 
 import android.os.Bundle
 import android.util.Log
@@ -6,15 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import com.minjee.favoritepokemon.databinding.FragmentAllPokemonBinding
+import com.minjee.favoritepokemon.databinding.FragmentTabAllPokemonBinding
+import com.minjee.favoritepokemon.databinding.FragmentTabMyPokemonBinding
+import com.minjee.favoritepokemon.ui.pokemon.allpokemon.AllPokemonTabViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class AllPokemonFragment : Fragment() {
+class MyPokemonTabFragment: Fragment() {
 
-    private val allPokemonViewModel: AllPokemonTabViewModel by viewModel()
+   private val myPokemonViewModel: MyPokemonTabViewModel by viewModel()
 
-    private var _binding: FragmentAllPokemonBinding? = null
+    private var _binding: FragmentTabMyPokemonBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,19 +23,14 @@ class AllPokemonFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAllPokemonBinding.inflate(inflater, container, false)
+        _binding = FragmentTabMyPokemonBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        allPokemonViewModel.getPokemon()
-        allPokemonViewModel.responseList.observe(viewLifecycleOwner, Observer {
 
-            Log.d("test22", it.results.size.toString())
-
-        })
     }
 
     override fun onDestroyView() {

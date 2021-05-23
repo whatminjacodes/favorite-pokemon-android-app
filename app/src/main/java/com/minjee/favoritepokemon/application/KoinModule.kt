@@ -2,7 +2,7 @@ package com.minjee.favoritepokemon.application
 
 import com.minjee.favoritepokemon.data.NetworkApi
 import com.minjee.favoritepokemon.data.PokemonRepository
-import com.minjee.favoritepokemon.ui.allpokemon.AllPokemonTabViewModel
+import com.minjee.favoritepokemon.ui.pokemon.allpokemon.AllPokemonTabViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel

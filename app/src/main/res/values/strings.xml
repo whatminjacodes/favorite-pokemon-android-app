@@ -8,6 +8,10 @@
     <string name="bottom_nav_title_favorites">Favorites</string>
     <string name="bottom_nav_title_settings">Settings</string>
 
+    <!-- Pokemon Fragment string -->
+    <string name="fragment_tab_all_pokemon_title">All Pokemon</string>
+    <string name="fragment_tab_my_pokemon_title">My Pokemon</string>
+
     <!-- All Pokemon Fragment strings -->
     <string name="fragment_all_pokemon_title">All 1st Gen Pokemon</string>
 

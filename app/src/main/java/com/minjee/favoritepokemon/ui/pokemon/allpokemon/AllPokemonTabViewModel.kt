@@ -1,4 +1,4 @@
-package com.minjee.favoritepokemon.ui.allpokemon
+package com.minjee.favoritepokemon.ui.pokemon.allpokemon
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
