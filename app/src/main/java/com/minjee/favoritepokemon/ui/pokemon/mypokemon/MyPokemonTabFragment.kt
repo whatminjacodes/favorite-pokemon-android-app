@@ -1,14 +1,11 @@
 package com.minjee.favoritepokemon.ui.pokemon.mypokemon
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.minjee.favoritepokemon.databinding.FragmentTabAllPokemonBinding
 import com.minjee.favoritepokemon.databinding.FragmentTabMyPokemonBinding
-import com.minjee.favoritepokemon.ui.pokemon.allpokemon.AllPokemonTabViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MyPokemonTabFragment: Fragment() {
@@ -29,7 +26,6 @@ class MyPokemonTabFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
     }
 

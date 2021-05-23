@@ -23,7 +23,7 @@ class PokemonFragment : Fragment() {
         val binding = FragmentPokemonBinding.inflate(inflater, container, false)
         this.binding = binding
 
-       val viewPager = binding.workViewPager
+        val viewPager = binding.workViewPager
         viewPager.adapter = ViewPagerAdapter(activity)
 
         val tabLayout = binding.fragmentPokemonTabLayout

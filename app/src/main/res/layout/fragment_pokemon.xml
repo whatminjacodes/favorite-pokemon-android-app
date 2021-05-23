@@ -6,36 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.pokemon.PokemonFragment">
 
-    <FrameLayout
-        android:id="@+id/fragmentPokemonFrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-
-        <TextView
-            android:id="@+id/fragmentPokemonFrameLayoutTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="All pokemon"
-            android:textSize="34sp"
-            android:layout_margin="20dp"
-            android:textColor="@color/white"
-            />
-
-    </FrameLayout>
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/fragmentPokemonTabLayout"
         style="@style/TabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragmentPokemonFrameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabMode="fixed"
         app:tabTextAppearance="@style/TabLayout.TextAppearance" />
 
     <androidx.viewpager2.widget.ViewPager2
