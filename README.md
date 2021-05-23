@@ -26,6 +26,6 @@ Koin version is 3.0.2. Find info about Koin from https://insert-koin.io/
 ### Setup times
 Basic project skeleton using MVVM, View binding and Navigation component ~2h
 
-Koin setup ~3h (I'm new with dependency injection)
+Koin setup ~3h
 
-Retrofit setup ~2h
+Retrofit setup ~4h
