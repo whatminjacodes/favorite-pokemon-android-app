@@ -1,6 +1,7 @@
 package com.minjee.favoritepokemon.ui.allpokemon
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,8 @@ class AllPokemonFragment : Fragment() {
 
     private var _binding: FragmentAllPokemonBinding? = null
     private val binding get() = _binding!!
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,6 +37,26 @@ class AllPokemonFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         allPokemonViewModel.setText("plaaplaa")
+
+        allPokemonViewModel.getPokemon()
+
+        allPokemonViewModel.getPost()
+        allPokemonViewModel.myResponse.observe(viewLifecycleOwner, Observer {
+            Log.d("test", it.body)
+            Log.d("test", it.title)
+            Log.d("test", it.id.toString())
+            Log.d("test", it.userId.toString())
+        })
+
+        allPokemonViewModel.getPosts()
+        allPokemonViewModel.myResponseList.observe(viewLifecycleOwner, Observer {
+            for (user in it) {
+                Log.d("test2", user.body)
+                Log.d("test2", user.title)
+                Log.d("test2", user.id.toString())
+                Log.d("test2", user.userId.toString())
+            }
+        })
     }
 
     override fun onDestroyView() {
