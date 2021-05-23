@@ -7,7 +7,7 @@ object UserNetwork {
 
     val retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com")
+            .baseUrl("https://pokeapi.co/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(UserAPI::class.java)

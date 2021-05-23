@@ -4,10 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.minjee.favoritepokemon.networking.PokemonRepository
-import com.minjee.favoritepokemon.networking.PokemonRequest
-import com.minjee.favoritepokemon.networking.User
-import com.minjee.favoritepokemon.networking.UserNetwork
+import com.minjee.favoritepokemon.networking.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -34,18 +31,23 @@ class AllPokemonViewModel(private val poksuRepository: PokemonRepository) : View
         }*/
     }
 
-    val myResponse: MutableLiveData<User> = MutableLiveData()
-    val myResponseList: MutableLiveData<List<User>> = MutableLiveData()
+    val myResponseList: MutableLiveData<Pokemon> = MutableLiveData()
 
-    fun getPost() {
-        viewModelScope.launch {
-            myResponse.value = UserNetwork.retrofit.getPost()
-        }
-    }
 
     fun getPosts() {
+        /*CoroutineScope(Dispatchers.IO).launch {
+            val pokemonResponse = poksuRepository.getPoksu(PokemonRequest(5))
+            //TODO: general error handling
+            val viewItems = pokemonResponse.map { pokemon ->
+                Log.d("test", pokemon)
+            }
+            withContext(Dispatchers.Main) {
+                testRecyclerViewItems.postValue(viewItems)
+            }
+        }*/
+
         viewModelScope.launch {
-            myResponseList.value = UserNetwork.retrofit.getPosts()
+            myResponseList.value = UserNetwork.retrofit.getPosts(5)
         }
     }
 }

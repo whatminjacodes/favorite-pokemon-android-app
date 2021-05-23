@@ -18,7 +18,6 @@ class AllPokemonFragment : Fragment() {
     private val binding get() = _binding!!
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,22 +39,11 @@ class AllPokemonFragment : Fragment() {
 
         allPokemonViewModel.getPokemon()
 
-        allPokemonViewModel.getPost()
-        allPokemonViewModel.myResponse.observe(viewLifecycleOwner, Observer {
-            Log.d("test", it.body)
-            Log.d("test", it.title)
-            Log.d("test", it.id.toString())
-            Log.d("test", it.userId.toString())
-        })
-
         allPokemonViewModel.getPosts()
         allPokemonViewModel.myResponseList.observe(viewLifecycleOwner, Observer {
-            for (user in it) {
-                Log.d("test2", user.body)
-                Log.d("test2", user.title)
-                Log.d("test2", user.id.toString())
-                Log.d("test2", user.userId.toString())
-            }
+
+            Log.d("test2", it.results.size.toString())
+
         })
     }
 
