@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.minjee.favoritepokemon.data.PokemonList
 import com.minjee.favoritepokemon.databinding.FragmentTabAllPokemonBinding
@@ -20,6 +21,7 @@ class AllPokemonTabFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var gridLayoutManager: GridLayoutManager
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,9 +49,10 @@ class AllPokemonTabFragment : Fragment() {
         )
 
         linearLayoutManager = LinearLayoutManager(context)
+        gridLayoutManager = GridLayoutManager(context, 2)
 
         binding.apply {
-            myPokemonTabRecyclerview.layoutManager = linearLayoutManager
+            myPokemonTabRecyclerview.layoutManager = gridLayoutManager
             myPokemonTabRecyclerview.adapter = PokemonRecyclerViewAdapter(listOfPokemon)
         }
     }

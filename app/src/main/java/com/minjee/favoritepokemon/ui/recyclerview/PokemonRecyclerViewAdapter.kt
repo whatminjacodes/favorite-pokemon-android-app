@@ -23,7 +23,7 @@ class PokemonRecyclerViewAdapter(private val items: List<PokemonList>) : Recycle
     inner class PokemonHolder(private val binding: RecyclerviewItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(name: String) {
             binding.apply {
-                itemName.text = name
+                pokemonName.text = name
             }
             // TODO: add clicklistener
            // binding.root.setOnClickListener { clickListener(move) }
