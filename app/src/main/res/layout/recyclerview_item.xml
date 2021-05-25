@@ -24,6 +24,7 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
             android:layout_margin="10dp"
+            android:textAllCaps="true"
             android:text="Bulbasaur"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

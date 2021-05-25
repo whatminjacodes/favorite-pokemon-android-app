@@ -23,12 +23,21 @@ class AllPokemonTabFragment : Fragment() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var gridLayoutManager: GridLayoutManager
 
+    private val pokemonListUpdatedObserver =
+        Observer<List<PokemonList>> { listOfPokemon ->
+            binding.myPokemonTabRecyclerview.adapter = PokemonRecyclerViewAdapter(listOfPokemon)
+        }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentTabAllPokemonBinding.inflate(inflater, container, false)
+
+        // Adding observers
+        allPokemonViewModel.listOfPokemon.observe(viewLifecycleOwner, pokemonListUpdatedObserver)
+
         return binding.root
     }
 
@@ -36,24 +45,12 @@ class AllPokemonTabFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         allPokemonViewModel.getPokemon()
-        allPokemonViewModel.responseList.observe(viewLifecycleOwner, Observer {
-
-            //pokemonList = it.results
-        })
-
-        var listOfPokemon = listOf<PokemonList>(
-            PokemonList("bulba", "asd"),
-            PokemonList("ivysaur", "asd"),
-            PokemonList("venusaur", "asd"),
-            PokemonList("pikapii", "asd")
-        )
 
         linearLayoutManager = LinearLayoutManager(context)
         gridLayoutManager = GridLayoutManager(context, 2)
 
         binding.apply {
             myPokemonTabRecyclerview.layoutManager = gridLayoutManager
-            myPokemonTabRecyclerview.adapter = PokemonRecyclerViewAdapter(listOfPokemon)
         }
     }
 

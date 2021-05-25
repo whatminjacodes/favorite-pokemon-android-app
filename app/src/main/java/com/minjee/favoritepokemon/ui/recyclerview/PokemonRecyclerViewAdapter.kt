@@ -2,6 +2,7 @@ package com.minjee.favoritepokemon.ui.recyclerview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.minjee.favoritepokemon.data.PokemonList
 import com.minjee.favoritepokemon.databinding.RecyclerviewItemBinding
