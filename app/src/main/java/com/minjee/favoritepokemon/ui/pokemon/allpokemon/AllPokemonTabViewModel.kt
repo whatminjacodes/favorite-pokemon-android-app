@@ -19,7 +19,6 @@ class AllPokemonTabViewModel(private val pokemonRepository: PokemonRepository) :
         CoroutineScope(Dispatchers.IO).launch {
             val pokemonResponse = pokemonRepository.getPokemon(PokemonRequest(10))
             //TODO: general error handling
-            //listOfPokemon = pokemonResponse.results
 
             withContext(Dispatchers.Main) {
                 listOfPokemon.postValue(pokemonResponse.results)

@@ -1,6 +1,7 @@
 package com.minjee.favoritepokemon.ui.pokemon.allpokemon
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,12 @@ class AllPokemonTabFragment : Fragment() {
 
     private val pokemonListUpdatedObserver =
         Observer<List<PokemonList>> { listOfPokemon ->
-            binding.myPokemonTabRecyclerview.adapter = PokemonRecyclerViewAdapter(listOfPokemon)
+            binding.allPokemonTabRecyclerview.adapter =
+                PokemonRecyclerViewAdapter(listOfPokemon) { name ->
+                    pokemonListItemClicked(
+                        name
+                    )
+                }
         }
 
     override fun onCreateView(
@@ -50,12 +56,16 @@ class AllPokemonTabFragment : Fragment() {
         gridLayoutManager = GridLayoutManager(context, 2)
 
         binding.apply {
-            myPokemonTabRecyclerview.layoutManager = gridLayoutManager
+            allPokemonTabRecyclerview.layoutManager = gridLayoutManager
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun pokemonListItemClicked(string: String) {
+        Log.d("test", string)
     }
 }
