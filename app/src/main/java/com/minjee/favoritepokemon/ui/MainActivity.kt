@@ -19,5 +19,7 @@ class MainActivity : AppCompatActivity() {
         val navigationController = findNavController(R.id.nav_host_fragment)
 
         navigationView.setupWithNavController(navigationController)
+
+        //test
     }
 }
