@@ -1,6 +1,5 @@
 package com.minjee.favoritepokemon.ui.pokemon.allpokemon
 
-import android.R
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.minjee.favoritepokemon.R
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -72,6 +72,6 @@ class AllPokemonTabFragment : Fragment() {
 
     private fun pokemonListItemClicked(string: String) {
         Log.d("test", string)
-       // NavHostFragment.findNavController(requireParentFragment()).navigate()
+        findNavController().navigate(R.id.action_AllPokemonFragment_to_PokemonDetailsFragment)
     }
 }

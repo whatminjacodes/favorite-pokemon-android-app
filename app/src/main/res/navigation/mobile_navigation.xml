@@ -9,7 +9,26 @@
         android:id="@+id/navigationAllPokemon"
         android:name="com.minjee.favoritepokemon.ui.pokemon.PokemonFragment"
         android:label="@string/fragment_all_pokemon_title"
-        tools:layout="@layout/fragment_pokemon" />
+        tools:layout="@layout/fragment_pokemon">
+
+    <action
+        android:id="@+id/action_AllPokemonFragment_to_PokemonDetailsFragment"
+        app:destination="@+id/navigationPokemonDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationPokemonDetails"
+        android:name="com.minjee.favoritepokemon.ui.pokemon.details.PokemonDetailsFragment"
+        android:label="Poksu Details"
+        tools:layout="@layout/fragment_pokemon_details">
+        <action
+            android:id="@+id/action_LoginWebViewFragment_to_BottomNavigationActivity"
+            app:destination="@+id/navigationAllPokemon"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigationAllPokemon"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
 
     <fragment
         android:id="@+id/navigationFavorites"
@@ -22,4 +41,6 @@
         android:name="com.minjee.favoritepokemon.ui.settings.SettingsFragment"
         android:label="@string/fragment_settings_title"
         tools:layout="@layout/fragment_settings" />
+
+
 </navigation>
