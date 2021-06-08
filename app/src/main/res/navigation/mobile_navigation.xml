@@ -11,9 +11,11 @@
         android:label="@string/fragment_all_pokemon_title"
         tools:layout="@layout/fragment_pokemon">
 
-    <action
-        android:id="@+id/action_AllPokemonFragment_to_PokemonDetailsFragment"
-        app:destination="@+id/navigationPokemonDetails" />
+        <action
+            android:id="@+id/action_AllPokemonFragment_to_PokemonDetailsFragment"
+            app:destination="@+id/navigationPokemonDetails">
+
+        </action>
     </fragment>
 
     <fragment
@@ -22,17 +24,9 @@
         android:label="Poksu Details"
         tools:layout="@layout/fragment_pokemon_details">
         <argument
-            android:name="pokemonName"
-            app:argType="string"
-            android:defaultValue="name" />
+            android:name="user"
+            app:argType="com.minjee.favoritepokemon.ui.pokemon.details.User" />
 
-        <action
-            android:id="@+id/action_LoginWebViewFragment_to_BottomNavigationActivity"
-            app:destination="@+id/navigationAllPokemon"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/navigationAllPokemon"
-            app:popUpToInclusive="true"
-            />
     </fragment>
 
     <fragment
