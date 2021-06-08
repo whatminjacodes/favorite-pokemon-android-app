@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import com.minjee.favoritepokemon.databinding.FragmentPokemonDetailsBinding
 
 class PokemonDetailsFragment: Fragment() {
+
+    val args: PokemonDetailsFragmentArgs by navArgs()
 
     //private val allPokemonViewModel: AllPokemonTabViewModel by viewModel()
 
@@ -31,7 +34,7 @@ class PokemonDetailsFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        val name = args.
     }
 
     override fun onDestroyView() {

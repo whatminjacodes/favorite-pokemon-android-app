@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.minjee.favoritepokemon.data.PokemonList
 import com.minjee.favoritepokemon.databinding.FragmentTabAllPokemonBinding
 import com.minjee.favoritepokemon.ui.pokemon.details.PokemonDetailsFragment
+import com.minjee.favoritepokemon.ui.pokemon.details.PokemonDetailsFragmentDirections
 import com.minjee.favoritepokemon.ui.recyclerview.PokemonRecyclerViewAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -72,6 +73,10 @@ class AllPokemonTabFragment : Fragment() {
 
     private fun pokemonListItemClicked(string: String) {
         Log.d("test", string)
-        findNavController().navigate(R.id.action_AllPokemonFragment_to_PokemonDetailsFragment)
+       // findNavController().navigate(R.id.action_AllPokemonFragment_to_PokemonDetailsFragment)
+
+        val action = PokemonDetailsFragmentDirections.actionLoginWebViewFragmentToBottomNavigationActivity(string)
+        findNavController().navigate(action)
+
     }
 }

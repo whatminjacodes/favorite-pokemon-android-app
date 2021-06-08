@@ -21,6 +21,11 @@
         android:name="com.minjee.favoritepokemon.ui.pokemon.details.PokemonDetailsFragment"
         android:label="Poksu Details"
         tools:layout="@layout/fragment_pokemon_details">
+        <argument
+            android:name="pokemonName"
+            app:argType="string"
+            android:defaultValue="name" />
+
         <action
             android:id="@+id/action_LoginWebViewFragment_to_BottomNavigationActivity"
             app:destination="@+id/navigationAllPokemon"
