@@ -14,11 +14,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- TabLayout style -->
     <style name="TabLayout" parent="android:Widget">
-        <item name="tabIndicatorColor">@color/purple_200</item>
+        <item name="tabIndicatorColor">@color/light_pink</item>
         <item name="tabIndicatorHeight">4dp</item>
-        <item name="tabBackground">@color/purple_500</item>
-        <item name="tabTextColor">@color/purple_700</item>
+        <item name="tabBackground">@color/red</item>
+        <item name="tabTextColor">@color/white</item>
         <item name="tabSelectedTextColor">@color/black</item>
     </style>
 
