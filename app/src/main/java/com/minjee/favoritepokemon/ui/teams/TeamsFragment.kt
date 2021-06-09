@@ -1,4 +1,4 @@
-package com.minjee.favoritepokemon.ui.favorites
+package com.minjee.favoritepokemon.ui.teams
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,27 +9,27 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.minjee.favoritepokemon.R
-import com.minjee.favoritepokemon.databinding.FragmentFavoritesBinding
-import com.minjee.favoritepokemon.ui.favorites.firstTeam.FirstTeamTabFragment
-import com.minjee.favoritepokemon.ui.favorites.secondTeam.SecondTeamTabFragment
+import com.minjee.favoritepokemon.databinding.FragmentTeamsBinding
+import com.minjee.favoritepokemon.ui.teams.firstTeam.FirstTeamTabFragment
+import com.minjee.favoritepokemon.ui.teams.secondTeam.SecondTeamTabFragment
 
 /*
  *      Fragment which has a TabLayout and ViewPager2 for displaying different Pokemon teams the user has chosen
  */
-class FavoritesFragment : Fragment() {
-    private var binding: FragmentFavoritesBinding? = null
+class TeamsFragment : Fragment() {
+    private var binding: FragmentTeamsBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentFavoritesBinding.inflate(inflater, container, false)
+        val binding = FragmentTeamsBinding.inflate(inflater, container, false)
         this.binding = binding
 
-        val viewPager = binding.workViewPager
+        val viewPager = binding.teamsViewPager
         viewPager.adapter = ViewPagerAdapter(activity)
 
-        val tabLayout = binding.fragmentPokemonTabLayout
+        val tabLayout = binding.fragmentTeamsTabLayout
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = (viewPager.adapter as ViewPagerAdapter?)!!.tabFragmentTitles[position]
         }.attach()
@@ -45,8 +45,8 @@ class FavoritesFragment : Fragment() {
     class ViewPagerAdapter(activity: FragmentActivity?) : FragmentStateAdapter(activity!!) {
 
         val tabFragmentTitles = arrayOf(
-            activity?.getString(R.string.fragment_tab_all_pokemon_title),
-            activity?.getString(R.string.fragment_tab_my_pokemon_title)
+            activity?.getString(R.string.fragment_first_tab_title),
+            activity?.getString(R.string.fragment_second_tab_title)
         )
 
         override fun getItemCount(): Int {

@@ -6,14 +6,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.minjee.favoritepokemon.data.PokemonList
 import com.minjee.favoritepokemon.databinding.RecyclerviewItemBinding
 
+/*
+ *      Recyclerview for displaying a list of Pokemon in Pokemon Fragment
+ */
 class PokemonRecyclerViewAdapter(
     private val items: List<PokemonList>,
     private val clickListener: (String) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding =
-            RecyclerviewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = RecyclerviewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return PokemonHolder(binding)
     }

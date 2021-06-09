@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red"
-    tools:context=".ui.pokemon.PokemonFragment">
+    tools:context=".ui.teams.TeamsFragment">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/fragmentPokemonTabLayout"
+        android:id="@+id/fragmentTeamsTabLayout"
         style="@style/TabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,12 +19,12 @@
         app:tabTextAppearance="@style/TabLayout.TextAppearance" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/workViewPager"
+        android:id="@+id/teamsViewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentPokemonTabLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentTeamsTabLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

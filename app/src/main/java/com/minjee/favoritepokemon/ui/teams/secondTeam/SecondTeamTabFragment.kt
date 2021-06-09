@@ -1,4 +1,4 @@
-package com.minjee.favoritepokemon.ui.favorites.secondTeam
+package com.minjee.favoritepokemon.ui.teams.secondTeam
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.minjee.favoritepokemon.ui.favorites.firstTeam
+package com.minjee.favoritepokemon.ui.teams.firstTeam
 
 import androidx.lifecycle.ViewModel
 import com.minjee.favoritepokemon.data.PokemonRepository

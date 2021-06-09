@@ -8,14 +8,14 @@
     <fragment
         android:id="@+id/navigationAllPokemon"
         android:name="com.minjee.favoritepokemon.ui.pokemon.PokemonFragment"
-        android:label="@string/fragment_all_pokemon_title"
+        android:label="@string/fragment_pokemon_title"
         tools:layout="@layout/fragment_pokemon" />
 
     <fragment
         android:id="@+id/navigationFavorites"
-        android:name="com.minjee.favoritepokemon.ui.favorites.FavoritesFragment"
-        android:label="@string/fragment_favorite_pokemon_title"
-        tools:layout="@layout/fragment_favorites" />
+        android:name="com.minjee.favoritepokemon.ui.teams.TeamsFragment"
+        android:label="@string/fragment_teams_title"
+        tools:layout="@layout/fragment_teams" />
 
     <fragment
         android:id="@+id/navigationSettings"

@@ -1,22 +1,20 @@
 <resources>
 
     <!-- General strings -->
-    <string name="app_name">Favorite Pokemon</string>
+    <string name="app_name">Choose Pokemon</string>
 
     <!-- Bottom Navigation strings -->
     <string name="bottom_nav_title_all_pokemon">All</string>
-    <string name="bottom_nav_title_favorites">Favorites</string>
+    <string name="bottom_nav_title_teams">Teams</string>
     <string name="bottom_nav_title_settings">Settings</string>
 
-    <!-- Pokemon Fragment string -->
-    <string name="fragment_tab_all_pokemon_title">All Pokemon</string>
-    <string name="fragment_tab_my_pokemon_title">My Pokemon</string>
+    <!-- Pokemon strings -->
+    <string name="fragment_pokemon_title">All 1st Gen Pokemon</string>
 
-    <!-- All Pokemon Fragment strings -->
-    <string name="fragment_all_pokemon_title">All 1st Gen Pokemon</string>
-
-    <!-- Favorite Pokemon Fragment strings -->
-    <string name="fragment_favorite_pokemon_title">My Favorites</string>
+    <!-- Teams string -->
+    <string name="fragment_teams_title">My Teams</string>
+    <string name="fragment_first_tab_title">1st Team</string>
+    <string name="fragment_second_tab_title">2nd Team</string>
 
     <!-- Settings Fragment strings -->
     <string name="fragment_settings_title">App Settings</string>

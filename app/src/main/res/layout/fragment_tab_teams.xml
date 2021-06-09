@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/red"
     android:layout_height="match_parent"
-    tools:context=".ui.favorites.firstTeam.FirstTeamTabFragment">
+    tools:context=".ui.teams.firstTeam.FirstTeamTabFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allPokemonTabRecyclerview"
