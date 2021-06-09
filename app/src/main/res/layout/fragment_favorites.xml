@@ -4,19 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.favorites.FavoritesFragment">
+    android:background="@color/red"
+    tools:context=".ui.pokemon.PokemonFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/fragmentPokemonTabLayout"
+        style="@style/TabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/TabLayout.TextAppearance" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/workViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentPokemonTabLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

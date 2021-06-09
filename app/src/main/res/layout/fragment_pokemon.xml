@@ -3,28 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/red"
+    android:layout_height="match_parent"
     tools:context=".ui.pokemon.PokemonFragment">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/fragmentPokemonTabLayout"
-        style="@style/TabLayout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allPokemonTabRecyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:background="@drawable/background_rounded_corners"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabMode="fixed"
-        app:tabTextAppearance="@style/TabLayout.TextAppearance" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/workViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentPokemonTabLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

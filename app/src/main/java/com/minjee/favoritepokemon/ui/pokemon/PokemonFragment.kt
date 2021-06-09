@@ -1,66 +1,71 @@
 package com.minjee.favoritepokemon.ui.pokemon
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.google.android.material.tabs.TabLayoutMediator
-import com.minjee.favoritepokemon.R
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.minjee.favoritepokemon.data.PokemonList
 import com.minjee.favoritepokemon.databinding.FragmentPokemonBinding
-import com.minjee.favoritepokemon.ui.pokemon.allpokemon.AllPokemonTabFragment
-import com.minjee.favoritepokemon.ui.pokemon.mypokemon.MyPokemonTabFragment
+import com.minjee.favoritepokemon.ui.recyclerview.PokemonRecyclerViewAdapter
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PokemonFragment : Fragment() {
-    private var binding: FragmentPokemonBinding? = null
+    private val allPokemonViewModel: PokemonViewModel by viewModel()
+
+    private var _binding: FragmentPokemonBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var gridLayoutManager: GridLayoutManager
+
+    private val pokemonListUpdatedObserver =
+        Observer<List<PokemonList>> { listOfPokemon ->
+            binding.allPokemonTabRecyclerview.adapter =
+                PokemonRecyclerViewAdapter(listOfPokemon) { name ->
+                    pokemonListItemClicked(
+                        name
+                    )
+                }
+        }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentPokemonBinding.inflate(inflater, container, false)
-        this.binding = binding
+        _binding = FragmentPokemonBinding.inflate(inflater, container, false)
 
-        val viewPager = binding.workViewPager
-        viewPager.adapter = ViewPagerAdapter(activity)
-
-        val tabLayout = binding.fragmentPokemonTabLayout
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = (viewPager.adapter as ViewPagerAdapter?)!!.tabFragmentTitles[position]
-        }.attach()
+        // Adding observers
+        allPokemonViewModel.listOfPokemon.observe(viewLifecycleOwner, pokemonListUpdatedObserver)
 
         return binding.root
     }
 
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        allPokemonViewModel.getPokemon()
+
+        linearLayoutManager = LinearLayoutManager(context)
+        gridLayoutManager = GridLayoutManager(context, 2)
+
+        binding.apply {
+            allPokemonTabRecyclerview.layoutManager = gridLayoutManager
+        }
     }
 
-    class ViewPagerAdapter(activity: FragmentActivity?) : FragmentStateAdapter(activity!!) {
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
-        val tabFragmentTitles = arrayOf(
-            activity?.getString(R.string.fragment_tab_all_pokemon_title),
-            activity?.getString(R.string.fragment_tab_my_pokemon_title)
-        )
-
-        override fun getItemCount(): Int {
-            return tabFragments.size
-        }
-
-        override fun getItemId(position: Int): Long {
-            return super.getItemId(position)
-        }
-
-        override fun createFragment(position: Int): Fragment {
-            return tabFragments[position]
-        }
-
-        private val tabFragments = arrayOf(
-            AllPokemonTabFragment(),
-            MyPokemonTabFragment()
-        )
+    private fun pokemonListItemClicked(string: String) {
+        Log.d("test", string)
+        // NavHostFragment.findNavController(requireParentFragment()).navigate()
     }
 }

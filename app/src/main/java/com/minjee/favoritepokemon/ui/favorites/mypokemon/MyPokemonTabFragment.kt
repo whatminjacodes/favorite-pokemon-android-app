@@ -1,4 +1,4 @@
-package com.minjee.favoritepokemon.ui.pokemon.mypokemon
+package com.minjee.favoritepokemon.ui.favorites.mypokemon
 
 import android.os.Bundle
 import android.view.LayoutInflater
