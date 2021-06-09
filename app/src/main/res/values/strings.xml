@@ -8,10 +8,10 @@
     <string name="bottom_nav_title_teams">Teams</string>
     <string name="bottom_nav_title_settings">Settings</string>
 
-    <!-- Pokemon strings -->
-    <string name="fragment_pokemon_title">All 1st Gen Pokemon</string>
+    <!-- Pokemon fragment strings -->
+    <string name="fragment_pokemon_title">What 1st Generation Pokemon are you looking for?</string>
 
-    <!-- Teams string -->
+    <!-- Teams fragment string -->
     <string name="fragment_teams_title">My Teams</string>
     <string name="fragment_first_tab_title">1st Team</string>
     <string name="fragment_second_tab_title">2nd Team</string>

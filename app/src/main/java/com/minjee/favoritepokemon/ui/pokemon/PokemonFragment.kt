@@ -25,7 +25,7 @@ class PokemonFragment : Fragment() {
 
     private val pokemonListUpdatedObserver =
         Observer<List<PokemonList>> { listOfPokemon ->
-            binding.allPokemonTabRecyclerview.adapter =
+            binding.pokemonFragmentRecyclerview.adapter =
                 PokemonRecyclerViewAdapter(listOfPokemon) { name ->
                     pokemonListItemClicked(
                         name
@@ -55,7 +55,7 @@ class PokemonFragment : Fragment() {
         gridLayoutManager = GridLayoutManager(context, 2)
 
         binding.apply {
-            allPokemonTabRecyclerview.layoutManager = gridLayoutManager
+            pokemonFragmentRecyclerview.layoutManager = gridLayoutManager
         }
     }
 

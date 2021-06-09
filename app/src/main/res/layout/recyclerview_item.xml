@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/pokemonName"
-            style="@style/TitleBig"
+            style="@style/TitleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/pokemonNumber"
-            style="@style/TitleBig"
+            style="@style/TitleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

@@ -8,7 +8,7 @@
     tools:context=".ui.teams.firstTeam.FirstTeamTabFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/allPokemonTabRecyclerview"
+        android:id="@+id/pokemonFragmentRecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
