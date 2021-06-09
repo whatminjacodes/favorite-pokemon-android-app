@@ -2,7 +2,7 @@ package com.minjee.favoritepokemon.application
 
 import com.minjee.favoritepokemon.data.NetworkApi
 import com.minjee.favoritepokemon.data.PokemonRepository
-import com.minjee.favoritepokemon.ui.favorites.allpokemon.AllPokemonTabViewModel
+import com.minjee.favoritepokemon.ui.favorites.firstTeam.FirstTeamTabViewModel
 import com.minjee.favoritepokemon.ui.pokemon.PokemonViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -12,7 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 val viewModelModule = module {
-    viewModel { AllPokemonTabViewModel(get()) }
+    viewModel { FirstTeamTabViewModel(get()) }
     viewModel { PokemonViewModel(get()) }
     single { PokemonRepository(get()) }
 }

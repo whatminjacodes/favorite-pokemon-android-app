@@ -10,9 +10,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.minjee.favoritepokemon.R
 import com.minjee.favoritepokemon.databinding.FragmentFavoritesBinding
-import com.minjee.favoritepokemon.ui.favorites.allpokemon.AllPokemonTabFragment
-import com.minjee.favoritepokemon.ui.favorites.mypokemon.MyPokemonTabFragment
+import com.minjee.favoritepokemon.ui.favorites.firstTeam.FirstTeamTabFragment
+import com.minjee.favoritepokemon.ui.favorites.secondTeam.SecondTeamTabFragment
 
+/*
+ *      Fragment which has a TabLayout and ViewPager2 for displaying different Pokemon teams the user has chosen
+ */
 class FavoritesFragment : Fragment() {
     private var binding: FragmentFavoritesBinding? = null
 
@@ -59,8 +62,8 @@ class FavoritesFragment : Fragment() {
         }
 
         private val tabFragments = arrayOf(
-            AllPokemonTabFragment(),
-            MyPokemonTabFragment()
+            FirstTeamTabFragment(),
+            SecondTeamTabFragment()
         )
     }
 }
