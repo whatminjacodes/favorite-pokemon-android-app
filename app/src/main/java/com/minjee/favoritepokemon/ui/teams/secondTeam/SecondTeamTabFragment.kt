@@ -1,18 +1,21 @@
-package com.minjee.favoritepokemon.ui.favorites
+package com.minjee.favoritepokemon.ui.teams.secondTeam
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.minjee.favoritepokemon.databinding.FragmentFavoritesBinding
+import com.minjee.favoritepokemon.databinding.FragmentTabTeamsBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class FavoritesFragment : Fragment() {
+/*
+ *      Fragment which will display a team of Pokemon chosen by the user
+ */
+class SecondTeamTabFragment : Fragment() {
 
-    private lateinit var favoritesViewModel: FavoritesViewModel
+    private val viewModel: SecondTeamTabViewModel by viewModel()
 
-    private var _binding: FragmentFavoritesBinding? = null
+    private var _binding: FragmentTabTeamsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,16 +23,13 @@ class FavoritesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        favoritesViewModel =
-            ViewModelProvider(this).get(FavoritesViewModel::class.java)
-        _binding = FragmentFavoritesBinding.inflate(inflater, container, false)
+        _binding = FragmentTabTeamsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textDashboard.text = "fave pokemon fragment teksti"
     }
 
     override fun onDestroyView() {

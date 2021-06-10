@@ -4,26 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.pokemon.PokemonFragment">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/fragmentPokemonTabLayout"
-        style="@style/TabLayout"
+    <TextView
+        android:id="@+id/pokemonFragmentTitle"
+        style="@style/TitleBig"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/background_rounded_corners"
+        android:paddingStart="20dp"
+        android:paddingTop="70dp"
+        android:paddingEnd="80dp"
+        android:paddingBottom="30dp"
+        android:text="@string/fragment_pokemon_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabMode="fixed"
-        app:tabTextAppearance="@style/TabLayout.TextAppearance" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/workViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentPokemonTabLayout" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pokemonFragmentRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:nestedScrollingEnabled="false"
+            android:background="@color/white"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pokemonFragmentTitle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

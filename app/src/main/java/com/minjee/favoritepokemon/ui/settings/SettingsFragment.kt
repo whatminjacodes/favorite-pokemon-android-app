@@ -8,6 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.minjee.favoritepokemon.databinding.FragmentSettingsBinding
 
+/*
+ *      Fragment which will have settings for user, at least:
+ *      - light/dark theme
+ *      - clear data
+ */
 class SettingsFragment : Fragment() {
 
     private lateinit var settingsViewModel: SettingsViewModel
