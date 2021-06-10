@@ -7,4 +7,27 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Pokemon type colors -->
+    <color name="type_normal">#a8a878</color>
+    <color name="type_fire">#f08030</color>
+    <color name="type_fighting">#c03028</color>
+    <color name="type_water">#6890f0</color>
+    <color name="type_flying">#a890f0</color>
+    <color name="type_grass">#78c850</color>
+    <color name="type_poison">#a040a0</color>
+    <color name="type_electric">#f8d030</color>
+    <color name="type_ground">#e0c068</color>
+    <color name="type_psychic">#f85888</color>
+    <color name="type_rock">#b8a038</color>
+    <color name="type_ice">#98d8d8</color>
+    <color name="type_bug">#a8b820</color>
+    <color name="type_dragon">#7038f8</color>
+    <color name="type_dark">#705848</color>
+    <color name="type_steel">#b8b8d0</color>
+    <color name="type_fairy">#ee99ac</color>
+
+    <!-- Recyclerview Card Styles -->
+    <color name="card_type_background_transparency">#50FFFFFF</color>
+    <color name="card_title_transparency">#80000000</color>
 </resources>

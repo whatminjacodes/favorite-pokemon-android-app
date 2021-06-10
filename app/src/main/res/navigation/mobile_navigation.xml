@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigationAllPokemon"
-        android:name="com.minjee.favoritepokemon.ui.allpokemon.AllPokemonFragment"
+        android:name="com.minjee.favoritepokemon.ui.pokemon.PokemonFragment"
         android:label="@string/fragment_all_pokemon_title"
-        tools:layout="@layout/fragment_all_pokemon" />
+        tools:layout="@layout/fragment_pokemon" />
 
     <fragment
         android:id="@+id/navigationFavorites"
