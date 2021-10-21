@@ -13,6 +13,8 @@ The app displays a list of 1st generation Pokemon and the user is able to favori
 - View binding
 - Retrofit/OkHttp/Gson for fetching the Pokemon data from https://pokeapi.co/docs/v2
 - Material Design best practices
+
+### Later versions
 - Light/Dark theme
 - (accessibility?)
 
